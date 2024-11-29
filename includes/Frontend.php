@@ -22,7 +22,7 @@ class Frontend
         // Ваш токен бота
         $telegram_bot_token = '7616178264:AAHc556HxdVZYStoONs67CBfHk9r2LsL8To';
         // Ваш ID чата
-        $chat_id = '-4696559617';
+        $chat_id = '-1002358627395';
     
         // Получение данных формы
         $submission = \WPCF7_Submission::get_instance();
@@ -39,7 +39,7 @@ class Frontend
             }
     
             // URL для отправки сообщения в Telegram
-            $telegram_api_url = "https://api.telegram.org/bot$telegram_bot_token/sendMessage?chat_id=$chat_id&text=" . urlencode($message);
+            $telegram_api_url = "https://api.telegram.org/bot$telegram_bot_token/sendMessage";
     
             // Отправка сообщения через cURL
             $response = wp_remote_post($telegram_api_url, [
