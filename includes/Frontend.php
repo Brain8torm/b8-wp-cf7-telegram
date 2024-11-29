@@ -7,7 +7,7 @@ class Frontend
     public function register_hooks()
     {
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
-        add_action('wpcf7_mail_sent', 'send_to_telegram');
+        add_action('wpcf7_mail_sent', [$this, 'send_to_telegram']);
 
 
     }
