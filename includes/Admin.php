@@ -28,7 +28,7 @@ class Admin
         $output .= '<div class="wrap">';
         $output .= '<h1>' . __('WP CF7 Telegram Settings', 'b8-wp-cf7-telegram') . '</h1>';
 
-        if (class_exists('WPCF7_ContactForm')) {
+        if (class_exists('\WPCF7_ContactForm')) {
             // Получаем все формы
             $forms = WPCF7_ContactForm::find();
 
