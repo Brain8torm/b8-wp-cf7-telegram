@@ -22,7 +22,7 @@ class Frontend
         // Ваш токен бота
         $telegram_bot_token = '7616178264:AAHc556HxdVZYStoONs67CBfHk9r2LsL8To';
         // Ваш ID чата
-        $chat_id = '5547881584';
+        $chat_id = '-4696559617';
     
         // Получение данных формы
         $submission = \WPCF7_Submission::get_instance();
