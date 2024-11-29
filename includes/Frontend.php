@@ -39,10 +39,10 @@ class Frontend
             }
     
             // URL для отправки сообщения в Telegram
-            $telegram_api_url = "https://api.telegram.org/bot$telegram_bot_token/sendMessage";
+            $telegram_api_url = "https://api.telegram.org/bot$telegram_bot_token/sendMessage?chat_id=$chat_id&text=" . urlencode($message);
     
             // Отправка сообщения через cURL
-            $response = wp_remote_post($telegram_api_url, [
+           /* $response = wp_remote_post($telegram_api_url, [
                 'body' => [
                     'chat_id' => $chat_id,
                     'text' => $message,
@@ -53,7 +53,7 @@ class Frontend
             // Логирование ошибок, если есть
             if (is_wp_error($response)) {
                 error_log('Ошибка отправки в Telegram: ' . $response->get_error_message());
-            }
+            }*/
         }
     }
 }
